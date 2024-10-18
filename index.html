@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>This App</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="container">
+<div class="banner">
+<p>Welcome to the This App!</p>
+</div>
+<h1>OBOBO App</h1>
+<div class="tabs">
+<button class="tab-button active" data-tab="stopwatch">Stopwatch</button>
+<button class="tab-button" data-tab="laptimer">Lap Timer</button>
+<button class="tab-button" data-tab="alarm">Alarm</button>
+</div>
+<div class="tab-content">
+<div id="stopwatch" class="tab-pane active">
+<div class="time-display">00:00:00.00</div>
+<div class="controls">
+<button id="stopwatch-startstop">Start</button>
+<button id="stopwatch-reset">Reset</button>
+</div>
+</div>
+<div id="laptimer" class="tab-pane">
+<div class="time-display">00:00:00.00</div>
+<div class="controls">
+<button id="laptimer-startstop">Start</button>
+<button id="laptimer-lap">Lap</button>
+<button id="laptimer-reset">Reset</button>
+</div>
+<div id="lap-list"></div>
+</div>
+<div id="alarm" class="tab-pane">
+<input type="time" id="alarm-time">
+<button id="alarm-set">Set Alarm</button>
+<div id="alarm-display"></div>
+</div>
+</div>
+<div class="instructions-box">
+    <h2>How to Use</h2>
+
+    <h3>Stopwatch Instructions:</h3>
+    <p>The stopwatch allows you to measure time with precision. Here's how to use it:</p>
+    <ol>
+        <li><strong>Start:</strong> Press the <strong>Start</strong> button to begin the stopwatch.</li>
+        <li><strong>Stop:</strong> While the stopwatch is running, press <strong>Stop</strong> to pause the timer.</li>
+        <li><strong>Reset:</strong> Press the <strong>Reset</strong> button to set the timer back to 00:00:00.00.</li>
+    </ol>
+
+    <h3>Lap Timer Instructions:</h3>
+    <p>The lap timer helps you record multiple time intervals or "laps" during a single session.</p>
+    <ol>
+        <li><strong>Start:</strong> Press the <strong>Start</strong> button to begin tracking time.</li>
+        <li><strong>Lap:</strong> While the timer is running, press the <strong>Lap</strong> button to record a lap.</li>
+        <ul>
+            <li>Each lap is displayed in the list below with the recorded time.</li>
+        </ul>
+        <li><strong>Stop:</strong> Press the <strong>Stop</strong> button to pause the timer.</li>
+        <li><strong>Reset:</strong> Press the <strong>Reset</strong> button to clear the timer and all lap records.</li>
+    </ol>
+
+    <h3>Alarm Instructions:</h3>
+    <p>The alarm feature allows you to set an alert for a specific time.</p>
+    <ol>
+        <li><strong>Set Alarm:</strong>
+            <ul>
+                <li>Use the <strong>time input field</strong> to select the desired alarm time (in HH:MM format).</li>
+                <li>Press <strong>Set Alarm</strong> to activate the alarm.</li>
+                <li>The alarm time will be displayed along with a confirmation message.</li>
+            </ul>
+        </li>
+        <li><strong>Cancel Alarm:</strong> If the alarm is active, press <strong>Cancel Alarm</strong> to deactivate it.</li>
+        <li><strong>Alarm Alert:</strong>
+            <ul>
+                <li>When the set time is reached, the alarm will display a message ("ALARM!") and play a sound.</li>
+                <li>To stop the alarm, press the <strong>Cancel Alarm</strong> button.</li>
+            </ul>
+        </li>
+    </ol>
+</div>
+
+<footer class="footer">
+<p>&copy; COMP.5211 2024</p>
+</footer>
+</div>
+<audio id="alarm-sound" src="alert-alarm.wav"></audio>
+<script src="script.js"></script>
+</body>
+</html>
